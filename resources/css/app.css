@@ -1,0 +1,78 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+
+:root {
+    --color-primary: #7D99B0;
+    --color-secondary: #9064C2;
+    --color-heading: #263445;
+    --color-body: #5F6B78;
+    --color-background: #FFFFFF;
+    --color-surface: #F6F8FB;
+    --color-border: #E4E9F0;
+    --font-family-base: "Plus Jakarta Sans", "Inter", sans-serif;
+}
+
+@theme {
+    --color-steel-50: #f4f6f9;
+    --color-steel-100: #e5ebf1;
+    --color-steel-200: #cdd9e4;
+    --color-steel-300: #a7bed3;
+    --color-steel-400: #8ba8c1;
+    --color-steel-500: #7D99B0;
+    --color-steel-600: #628099;
+    --color-steel-700: #4f687e;
+    --color-steel-800: #435768;
+    --color-steel-900: #3a4957;
+
+    --color-royal-50: #f8f5fd;
+    --color-royal-100: #f0eaf9;
+    --color-royal-200: #e2d6f3;
+    --color-royal-300: #ccb6ea;
+    --color-royal-400: #ae8ede;
+    --color-royal-500: #9064C2;
+    --color-royal-600: #7d4fad;
+    --color-royal-700: #673d91;
+    --color-royal-800: #553477;
+    --color-royal-900: #462c62;
+
+    --color-heading: #263445;
+    --color-body: #5F6B78;
+    --color-surface: #F6F8FB;
+    --color-border-subtle: #E4E9F0;
+
+    --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F6F8FB;
+}
+::-webkit-scrollbar-thumb {
+    background: #cdd9e4;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #7D99B0;
+}
