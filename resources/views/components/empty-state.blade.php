@@ -8,6 +8,6 @@
     <div class="w-12 h-12 rounded-full bg-steel-100/70 text-steel-600 flex items-center justify-center mb-4">
         <x-icon :name="$icon" class="w-6 h-6" />
     </div>
-    <h3 class="text-base font-semibold text-heading mb-1">{{ $title }}</h3>
-    <p class="text-sm text-body leading-relaxed">{{ $message }}</p>
+    <h3 class="text-base font-semibold text-heading mb-1">{{ __((string) $title) }}</h3>
+    <p class="text-sm text-body leading-relaxed">{{ __((string) $message) }}</p>
 </div>

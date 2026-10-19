@@ -46,11 +46,11 @@
     }" 
     @scroll.window="scrolled = (window.pageYOffset > 40)"
     @keydown.escape.window="closeModal()"
-    class="min-h-full flex flex-col text-body font-sans bg-white selection:bg-royal-100 selection:text-royal-900"
+    class="min-h-full flex flex-col text-body font-sans bg-white selection:bg-[#2466C1]/20 selection:text-[#163b70]"
 >
     <!-- Accessibility Skip Link -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-heading focus:text-white focus:rounded-md focus:shadow-lg focus:outline-none">
-        Lompat ke konten utama
+        {{ __('Lompat ke konten utama') }}
     </a>
 
     <!-- Top Bar -->

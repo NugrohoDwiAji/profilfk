@@ -6,7 +6,6 @@ use App\Models\ContactMessage;
 use App\Models\FacultyMember;
 use App\Models\News;
 use App\Models\Program;
-use App\Models\ResearchProject;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -72,7 +71,7 @@ class LandingPageTest extends TestCase
             'status' => 'published',
         ]);
 
-        $response = $this->get('/berita/' . $news->slug);
+        $response = $this->get('/berita/'.$news->slug);
 
         $response->assertStatus(200);
         $response->assertSee('Kuliah Perdana Blok Kedokteran Dasar');
@@ -91,7 +90,7 @@ class LandingPageTest extends TestCase
             'status' => 'draft',
         ]);
 
-        $response = $this->get('/berita/' . $draft->slug);
+        $response = $this->get('/berita/'.$draft->slug);
 
         $response->assertStatus(404);
     }
@@ -111,7 +110,7 @@ class LandingPageTest extends TestCase
             'is_active' => true,
         ]);
 
-        $response = $this->get('/program/' . $program->slug);
+        $response = $this->get('/program/'.$program->slug);
 
         $response->assertStatus(200);
         $response->assertSee('Sarjana Kedokteran');
@@ -163,5 +162,29 @@ class LandingPageTest extends TestCase
 
         $response->assertSessionHasErrors(['name', 'email', 'category', 'message']);
         $this->assertEquals(0, ContactMessage::count());
+    }
+
+    public function test_faculty_members_appear_on_homepage(): void
+    {
+        FacultyMember::create([
+            'name' => 'Dr. dr. Test Dosen, M.Kes.',
+            'academic_title' => 'Dr. dr.',
+            'nik' => '0812345678',
+            'position' => 'Dekan Fakultas Kedokteran',
+            'category' => 'pimpinan',
+            'specialization' => 'Pendidikan Kedokteran',
+            'department' => 'Manajemen Kedokteran',
+            'photo_url' => '/images/faculty/dr1.png',
+            'email' => 'test@fk.bumigora.ac.id',
+            'is_active' => true,
+            'sort_order' => 1,
+        ]);
+
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+        $response->assertSee('Dr. dr. Test Dosen, M.Kes.');
+        $response->assertSee('Pimpinan');
+        $response->assertSee('Pendidikan Kedokteran');
     }
 }

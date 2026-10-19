@@ -5,14 +5,18 @@ namespace Database\Seeders;
 use App\Models\ContactMessage;
 use App\Models\Facility;
 use App\Models\FacultyMember;
+use App\Models\Gallery;
 use App\Models\News;
+use App\Models\OrganizationStructure;
 use App\Models\Program;
 use App\Models\ResearchProject;
 use App\Models\SiteSetting;
+use App\Models\TeachingHospital;
 use App\Models\User;
+use App\Models\VisionMission;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class DatabaseSeeder extends Seeder
 {
@@ -110,11 +114,12 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'Dr. dr. Ni Luh Putu Inca Buntari, M.Kes.',
                 'academic_title' => 'Dr. dr., M.Kes.',
+                'nik' => '0819027801',
                 'position' => 'Dekan Fakultas Kedokteran',
-                'category' => 'pimpinan',
+                'category' => ['pimpinan', 'pakar_med_ed'],
                 'specialization' => 'Pendidikan Kedokteran & Kesehatan Masyarakat',
                 'department' => 'Manajemen Pendidikan Kedokteran',
-                'photo_url' => '/images/faculty/dr1.png',
+                'photo_url' => '/images/pimpinan/dekan.jpeg',
                 'email' => 'inca.buntari@fk.bumigora.ac.id',
                 'bio' => 'Berpengalaman dalam pengembangan kurikulum kedokteran berstandar nasional dan kepemimpinan institusi pendidikan tinggi kesehatan.',
                 'is_active' => true,
@@ -123,11 +128,12 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'dr. I Wayan Suardana, M.Kes.',
                 'academic_title' => 'dr., M.Kes.',
+                'nik' => '0814058202',
                 'position' => 'Wakil Dekan I (Bidang Akademik & Kemahasiswaan)',
-                'category' => 'pimpinan',
+                'category' => ['pimpinan', 'komunitas_pencegahan'],
                 'specialization' => 'Ilmu Kedokteran Komunitas & Epidemiologi Klinis',
                 'department' => 'Departemen Kedokteran Komunitas',
-                'photo_url' => '/images/faculty/dr11.png',
+                'photo_url' => '/images/pimpinan/wd1.jpeg',
                 'email' => 'suardana@fk.bumigora.ac.id',
                 'bio' => 'Fokus pada kurikulum blok, sistem asesmen objektif (OSCE/MCQ), dan integrasi keterampilan klinis sejak semester awal.',
                 'is_active' => true,
@@ -136,11 +142,12 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'dr. I Gede Wira Suardana, M.Sc.',
                 'academic_title' => 'dr., M.Sc.',
+                'nik' => '0822098503',
                 'position' => 'Wakil Dekan II (Bidang Umum, SDM & Keuangan)',
-                'category' => 'pimpinan',
+                'category' => ['pimpinan', 'dosen_biomedik'],
                 'specialization' => 'Ilmu Biomedik & Farmakologi',
                 'department' => 'Departemen Biomedik',
-                'photo_url' => '/images/faculty/dr12.png',
+                'photo_url' => '/images/pimpinan/wd2.jpeg',
                 'email' => 'wira.suardana@fk.bumigora.ac.id',
                 'bio' => 'Mengampu bidang biomedik, manajemen sarana laboratorium kedokteran modern, serta penjaminan mutu sarana akademik.',
                 'is_active' => true,
@@ -149,11 +156,12 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'dr. Lalu Irwan, M.Kes.',
                 'academic_title' => 'dr., M.Kes.',
+                'nik' => '0803118604',
                 'position' => 'Wakil Dekan III (Bidang Kerjasama & Riset)',
-                'category' => 'pimpinan',
+                'category' => ['pimpinan', 'komunitas_pencegahan'],
                 'specialization' => 'Kesehatan Kerja & Kerjasama Institusi Klinis',
                 'department' => 'Departemen Kerjasama Klinis',
-                'photo_url' => '/images/faculty/dr14.png',
+                'photo_url' => '/images/pimpinan/kaprodi.jpeg',
                 'email' => 'lalu.irwan@fk.bumigora.ac.id',
                 'bio' => 'Mengkoordinasikan jejaring kerjasama rumah sakit pendidikan dan wahana pengabdian masyarakat di kawasan Nusa Tenggara Barat.',
                 'is_active' => true,
@@ -162,11 +170,12 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'dr. Amy Rahmadanti, Sp.A',
                 'academic_title' => 'dr., Sp.A',
+                'nik' => '0818078905',
                 'position' => 'Dosen Pendidik Klinis',
-                'category' => 'dosen_klinis',
+                'category' => ['dosen_spesialis'],
                 'specialization' => 'Ilmu Kesehatan Anak (Pediatri)',
                 'department' => 'Departemen Ilmu Kesehatan Anak',
-                'photo_url' => '/images/faculty/dr15.png',
+                'photo_url' => '/images/pimpinan/wd2.jpeg',
                 'email' => 'amy.rahmadanti@fk.bumigora.ac.id',
                 'bio' => 'Dokter spesialis anak aktif yang membimbing mahasiswa dalam rotasi klinis pediatri dan modul tumbuh kembang anak.',
                 'is_active' => true,
@@ -175,8 +184,9 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'dr. Dina, Sp.PK',
                 'academic_title' => 'dr., Sp.PK',
+                'nik' => '0825049006',
                 'position' => 'Dosen Pendidik Klinis',
-                'category' => 'dosen_klinis',
+                'category' => ['dosen_spesialis'],
                 'specialization' => 'Patologi Klinik & Diagnostik Laboratorium',
                 'department' => 'Departemen Patologi Klinik',
                 'photo_url' => '/images/faculty/dr16.png',
@@ -204,7 +214,7 @@ class DatabaseSeeder extends Seeder
                     'Peralatan bedah minor dan keterampilan tindakan invasif terarah',
                     'Sistem rekaman audio-visual untuk evaluasi dan debriefing',
                 ],
-                'image_url' => '/images/facilities/skills-lab.jpg',
+                'image_url' => 'facilities/skills-lab.jpg',
                 'is_active' => true,
                 'sort_order' => 1,
             ],
@@ -219,7 +229,7 @@ class DatabaseSeeder extends Seeder
                     'Fasilitas kultur mikrobiologi dan uji resistensi antibiotik',
                     'Standar biosafety dan sanitasi laboratorium modern',
                 ],
-                'image_url' => '/images/facilities/anatomy-lab.jpg',
+                'image_url' => 'facilities/anatomy-lab.jpg',
                 'is_active' => true,
                 'sort_order' => 2,
             ],
@@ -234,7 +244,7 @@ class DatabaseSeeder extends Seeder
                     'Kamar Operasi modern dan ICU terintegrasi',
                     'Rotasi komunitas terpadu di wilayah Lombok Tengah dan NTB',
                 ],
-                'image_url' => '/images/facilities/hospital.jpg',
+                'image_url' => 'facilities/hospital.jpg',
                 'is_active' => true,
                 'sort_order' => 3,
             ],
@@ -249,11 +259,18 @@ class DatabaseSeeder extends Seeder
                     'Ruang belajar tenang (silent study area) dan bilik diskusi PBL',
                     'Akses intranet berkecepatan tinggi ke portal riset universitas',
                 ],
-                'image_url' => '/images/facilities/library.jpg',
+                'image_url' => 'facilities/library.jpg',
                 'is_active' => true,
                 'sort_order' => 4,
             ],
         ];
+
+        if (! Storage::disk('public')->exists('facilities/skills-lab.jpg') && file_exists(public_path('images/facilities/skills-lab.jpg'))) {
+            Storage::disk('public')->makeDirectory('facilities');
+            foreach (glob(public_path('images/facilities/*')) as $file) {
+                copy($file, storage_path('app/public/facilities/'.basename($file)));
+            }
+        }
 
         foreach ($facilities as $fac) {
             Facility::updateOrCreate(['slug' => $fac['slug']], $fac);
@@ -378,5 +395,17 @@ class DatabaseSeeder extends Seeder
                 'ip_address' => '127.0.0.1',
             ]
         );
+
+        // 9. Vision & Mission (Fakultas & Program Studi)
+        VisionMission::seedDefaults();
+
+        // 10. Gallery Photos & Documentation
+        Gallery::seedDefaults();
+
+        // 11. Teaching Hospitals & Clinical Network
+        TeachingHospital::seedDefaults();
+
+        // 12. Organization Structure
+        OrganizationStructure::seedDefaults();
     }
 }

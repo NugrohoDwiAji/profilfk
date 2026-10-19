@@ -2,13 +2,18 @@
 
 namespace App\Models;
 
+use App\Casts\TranslatableCast;
+use App\Models\Concerns\CleansUpFiles;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class ResearchProject extends Model
 {
+    use CleansUpFiles;
     use HasFactory;
+
+    protected array $fileAttributes = ['featured_image'];
 
     protected $fillable = [
         'title',
@@ -24,6 +29,11 @@ class ResearchProject extends Model
     ];
 
     protected $casts = [
+        'title' => TranslatableCast::class,
+        'summary' => TranslatableCast::class,
+        'description' => TranslatableCast::class,
+        'leader_name' => TranslatableCast::class,
+        'partner_institution' => TranslatableCast::class,
         'publication_date' => 'date',
     ];
 

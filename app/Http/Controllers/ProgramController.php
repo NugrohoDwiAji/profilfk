@@ -21,7 +21,7 @@ class ProgramController extends Controller
             ->where('id', '!=', $program->id)
             ->get();
 
-        $settings = SiteSetting::pluck('value', 'key')->all();
+        $settings = SiteSetting::allMap();
 
         return view('pages.program-detail', compact('program', 'allPrograms', 'settings'));
     }

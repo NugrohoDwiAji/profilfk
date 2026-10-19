@@ -2,13 +2,18 @@
 
 namespace App\Models;
 
+use App\Casts\TranslatableCast;
+use App\Models\Concerns\CleansUpFiles;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class News extends Model
 {
+    use CleansUpFiles;
     use HasFactory;
+
+    protected array $fileAttributes = ['featured_image'];
 
     protected $fillable = [
         'title',
@@ -23,6 +28,9 @@ class News extends Model
     ];
 
     protected $casts = [
+        'title' => TranslatableCast::class,
+        'excerpt' => TranslatableCast::class,
+        'content' => TranslatableCast::class,
         'published_at' => 'datetime',
         'views_count' => 'integer',
     ];
@@ -38,6 +46,7 @@ class News extends Model
     public function getReadingTimeAttribute(): int
     {
         $words = str_word_count(strip_tags($this->content));
+
         return max(1, (int) ceil($words / 200));
     }
 }

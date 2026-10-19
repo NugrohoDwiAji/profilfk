@@ -5,8 +5,14 @@
 @source '../views/**/*.blade.php';
 
 :root {
-    --color-primary: #7D99B0;
-    --color-secondary: #9064C2;
+    --color-primary: #08244b;
+    --color-secondary: #2466c1;
+    --gradient-brand: linear-gradient(135deg, #08244b 0%, #2466c1 50%, #08244b 100%);
+    --gradient-brand-r: linear-gradient(to right, #08244b 0%, #2466c1 50%, #08244b 100%);
+    --gradient-brand-center: linear-gradient(to right, #08244b 0%, #2466c1 50%, #08244b 100%);
+    --gradient-brand-radial: radial-gradient(circle at center, #2466c1 0%, #08244b 100%);
+    --gradient-brand-hover: linear-gradient(to right, #05162e 0%, #1e56a4 50%, #05162e 100%);
+    --gradient-brand-subtle: linear-gradient(to right, rgba(8, 36, 75, 0.12) 0%, rgba(36, 102, 193, 0.15) 50%, rgba(8, 36, 75, 0.12) 100%);
     --color-heading: #263445;
     --color-body: #5F6B78;
     --color-background: #FFFFFF;
@@ -27,16 +33,16 @@
     --color-steel-800: #435768;
     --color-steel-900: #3a4957;
 
-    --color-royal-50: #f8f5fd;
-    --color-royal-100: #f0eaf9;
-    --color-royal-200: #e2d6f3;
-    --color-royal-300: #ccb6ea;
-    --color-royal-400: #ae8ede;
-    --color-royal-500: #9064C2;
-    --color-royal-600: #7d4fad;
-    --color-royal-700: #673d91;
-    --color-royal-800: #553477;
-    --color-royal-900: #462c62;
+    --color-royal-50: #f0f6fe;
+    --color-royal-100: #deecfb;
+    --color-royal-200: #c4dff8;
+    --color-royal-300: #9bc7f4;
+    --color-royal-400: #6aa7ed;
+    --color-royal-500: #2466C1;
+    --color-royal-600: #1e56a4;
+    --color-royal-700: #194686;
+    --color-royal-800: #163b70;
+    --color-royal-900: #08244b;
 
     --color-heading: #263445;
     --color-body: #5F6B78;
@@ -44,6 +50,97 @@
     --color-border-subtle: #E4E9F0;
 
     --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Gradient Theme Utilities */
+.bg-gradient-brand {
+    background-image: linear-gradient(135deg, #08244b 0%, #2466c1 50%, #08244b 100%);
+}
+
+.bg-gradient-brand-r {
+    background-image: linear-gradient(to right, #08244b 0%, #2466c1 50%, #08244b 100%);
+}
+
+.bg-gradient-brand-center {
+    background-image: linear-gradient(to right, #08244b 0%, #2466c1 50%, #08244b 100%);
+}
+
+.bg-gradient-brand-radial {
+    background-image: radial-gradient(circle at center, #2466c1 0%, #08244b 100%);
+}
+
+.bg-gradient-brand-subtle {
+    background-image: linear-gradient(to right, rgba(8, 36, 75, 0.12) 0%, rgba(36, 102, 193, 0.15) 50%, rgba(8, 36, 75, 0.12) 100%);
+}
+
+.text-gradient-brand {
+    background: linear-gradient(135deg, #08244b 0%, #2466c1 50%, #08244b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-brand-r {
+    background: linear-gradient(to right, #08244b 0%, #2466c1 50%, #08244b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.border-gradient-brand {
+    border-image: linear-gradient(to right, #08244b 0%, #2466c1 50%, #08244b 100%) 1;
+}
+
+/* Hero Visual Entrance Animations (Ease-in-out) */
+@keyframes heroImageSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(48px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroPillarFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes heroPillarFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-hero-image {
+    animation: heroImageSlideUp 0.85s ease-in-out 0.1s both;
+}
+
+.animate-hero-pillar-left-1 {
+    animation: heroPillarFromLeft 0.75s ease-in-out 0.5s both;
+}
+
+.animate-hero-pillar-right-1 {
+    animation: heroPillarFromRight 0.75s ease-in-out 0.6s both;
+}
+
+.animate-hero-pillar-left-2 {
+    animation: heroPillarFromLeft 0.75s ease-in-out 0.7s both;
+}
+
+.animate-hero-pillar-right-2 {
+    animation: heroPillarFromRight 0.75s ease-in-out 0.8s both;
 }
 
 html {
@@ -62,6 +159,14 @@ html {
     }
 }
 
+/* Compact Hero for 1280x800 & short laptop screens */
+@media (min-width: 1024px) and (max-height: 820px) {
+    #hero {
+        padding-top: 1.75rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
@@ -70,9 +175,9 @@ html {
     background: #F6F8FB;
 }
 ::-webkit-scrollbar-thumb {
-    background: #cdd9e4;
+    background: linear-gradient(180deg, #08244b 0%, #2466c1 50%, #08244b 100%);
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #7D99B0;
+    background: linear-gradient(180deg, #05162e 0%, #1e56a4 50%, #05162e 100%);
 }

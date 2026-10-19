@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" width="100%" height="100%">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08244B"/>
+      <stop offset="50%" stop-color="#144282"/>
+      <stop offset="100%" stop-color="#2466C1"/>
+    </linearGradient>
+    <linearGradient id="dekanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C3266"/>
+      <stop offset="100%" stop-color="#1B55A4"/>
+    </linearGradient>
+    <linearGradient id="wdGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1D4ED8"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="supportGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748B" />
+    </marker>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="860" fill="#F8FAFC" rx="16"/>
+  <rect x="12" y="12" width="1176" height="836" fill="#FFFFFF" rx="12" stroke="#E2E8F0" stroke-width="2"/>
+  <pattern id="gridPattern" width="24" height="24" patternUnits="userSpaceOnUse">
+    <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#F1F5F9" stroke-width="1"/>
+  </pattern>
+  <rect x="12" y="12" width="1176" height="836" fill="url(#gridPattern)" rx="12"/>
+
+  <!-- Top Title Banner -->
+  <g transform="translate(40, 36)">
+    <rect width="1120" height="82" rx="12" fill="url(#headerGrad)" filter="url(#shadow)"/>
+    <!-- Subtle accent line -->
+    <rect x="0" y="78" width="1120" height="4" rx="2" fill="#38BDF8"/>
+    <text x="560" y="36" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" letter-spacing="1.5">
+      STRUKTUR ORGANISASI TATA KELOLA (SOTK)
+    </text>
+    <text x="560" y="60" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500" fill="#E0F2FE" letter-spacing="0.5">
+      FAKULTAS KEDOKTERAN UNIVERSITAS BUMIGORA • PERIODE 2024 - 2028
+    </text>
+  </g>
+
+  <!-- Connector Lines Hierarchy -->
+  <g stroke="#94A3B8" stroke-width="2" fill="none" stroke-linejoin="round">
+    <!-- Rektor down to Dekan -->
+    <path d="M 390 190 L 390 216 L 600 216 L 600 240"/>
+    
+    <!-- Senat to Dekan (Consultative / Dashed) -->
+    <path d="M 720 190 L 720 216 L 600 216" stroke-dasharray="4 4"/>
+
+    <!-- Dekan down to horizontal distributor -->
+    <path d="M 600 326 L 600 366"/>
+
+    <!-- Support Units horizontal wings from Dekan connector -->
+    <path d="M 180 280 L 460 280"/>
+    <path d="M 740 280 L 1020 280"/>
+
+    <!-- Main Horizontal Distributor Bar -->
+    <path d="M 230 366 L 970 366"/>
+
+    <!-- Drops from Distributor to 3 Vice Deans -->
+    <path d="M 230 366 L 230 400"/>
+    <path d="M 600 366 L 600 400"/>
+    <path d="M 970 366 L 970 400"/>
+
+    <!-- Sub-unit branches for WD I -->
+    <path d="M 230 488 L 230 520"/>
+    <path d="M 230 520 L 230 790"/>
+
+    <!-- Sub-unit branches for WD II -->
+    <path d="M 600 488 L 600 520"/>
+    <path d="M 600 520 L 600 790"/>
+
+    <!-- Sub-unit branches for WD III -->
+    <path d="M 970 488 L 970 520"/>
+    <path d="M 970 520 L 970 790"/>
+  </g>
+
+  <!-- LEVEL 1: Rektor & Senat -->
+  <!-- Rektor (Executive University Oversight) -->
+  <g transform="translate(260, 142)" filter="url(#cardShadow)">
+    <rect width="260" height="52" rx="10" fill="#FFFFFF" stroke="#08244B" stroke-width="2"/>
+    <rect x="0" y="0" width="8" height="52" rx="4" fill="#08244B"/>
+    <text x="134" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#08244B" letter-spacing="0.5">REKTOR UNIVERSITAS BUMIGORA</text>
+    <text x="134" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#475569">Pembina Institusi</text>
+  </g>
+
+  <!-- Senat Fakultas (Advisory & Academic Body) -->
+  <g transform="translate(680, 142)" filter="url(#cardShadow)">
+    <rect width="260" height="52" rx="10" fill="#FFFFFF" stroke="#475569" stroke-width="2" stroke-dasharray="6 4"/>
+    <rect x="0" y="0" width="8" height="52" rx="4" fill="#64748B"/>
+    <text x="134" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1E293B" letter-spacing="0.5">SENAT FAKULTAS KEDOKTERAN</text>
+    <text x="134" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#64748B">Pertimbangan Akademik &amp; Etika</text>
+  </g>
+
+  <!-- SIDE LEVEL 2: Support Bodies (UPMF & MEU) -->
+  <!-- UPMF (Left Wing) -->
+  <g transform="translate(50, 252)" filter="url(#cardShadow)">
+    <rect width="240" height="56" rx="10" fill="#F0FDF4" stroke="#16A34A" stroke-width="1.5"/>
+    <text x="120" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#166534">UNIT PENJAMINAN MUTU (UPMF)</text>
+    <text x="120" y="42" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#15803D">Audit Mutu Akademik Internal (AMAI)</text>
+  </g>
+
+  <!-- MEU (Right Wing) -->
+  <g transform="translate(910, 252)" filter="url(#cardShadow)">
+    <rect width="240" height="56" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+    <text x="120" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#1E40AF">MEDICAL EDUCATION UNIT (MEU)</text>
+    <text x="120" y="42" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#3B82F6">Pengembangan Kurikulum Blok &amp; PBL</text>
+  </g>
+
+  <!-- LEVEL 2: DEKAN (Center Pivot) -->
+  <g transform="translate(450, 240)" filter="url(#shadow)">
+    <rect width="300" height="86" rx="14" fill="url(#dekanGrad)" stroke="#38BDF8" stroke-width="2"/>
+    <text x="150" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#BAE6FD" letter-spacing="1">DEKAN FAKULTAS KEDOKTERAN</text>
+    <text x="150" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">dr. Karina Anindita, Sp.PD, M.Biomed.</text>
+    <text x="150" y="70" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#E0F2FE">FINASIM, AIFO-K</text>
+  </g>
+
+  <!-- LEVEL 3: TIGA WAKIL DEKAN -->
+  <!-- Wakil Dekan I -->
+  <g transform="translate(90, 400)" filter="url(#cardShadow)">
+    <rect width="280" height="88" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <rect x="0" y="0" width="280" height="28" rx="10" fill="#2563EB"/>
+    <text x="140" y="19" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#FFFFFF">WAKIL DEKAN I</text>
+    <text x="140" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1E3A8A">Bidang Akademik &amp; Kemahasiswaan</text>
+    <text x="140" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0F172A">dr. I Wayan Suardana, M.Kes.</text>
+    <text x="140" y="80" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500" fill="#64748B">NIK: 0814058202</text>
+  </g>
+
+  <!-- Wakil Dekan II -->
+  <g transform="translate(460, 400)" filter="url(#cardShadow)">
+    <rect width="280" height="88" rx="12" fill="#FFFFFF" stroke="#08244B" stroke-width="2"/>
+    <rect x="0" y="0" width="280" height="28" rx="10" fill="#08244B"/>
+    <text x="140" y="19" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#FFFFFF">WAKIL DEKAN II</text>
+    <text x="140" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#0C4A6E">Bidang Umum, Keuangan &amp; SDM</text>
+    <text x="140" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0F172A">dr. I Gede Wira Suardana, M.Sc.</text>
+    <text x="140" y="80" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500" fill="#64748B">NIK: 0822098503</text>
+  </g>
+
+  <!-- Wakil Dekan III -->
+  <g transform="translate(830, 400)" filter="url(#cardShadow)">
+    <rect width="280" height="88" rx="12" fill="#FFFFFF" stroke="#0D9488" stroke-width="2"/>
+    <rect x="0" y="0" width="280" height="28" rx="10" fill="#0D9488"/>
+    <text x="140" y="19" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#FFFFFF">WAKIL DEKAN III</text>
+    <text x="140" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#134E4A">Bidang Kerjasama, Riset &amp; Alumni</text>
+    <text x="140" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0F172A">dr. Lalu Irwan, M.Kes.</text>
+    <text x="140" y="80" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500" fill="#64748B">NIK: 0803118604</text>
+  </g>
+
+  <!-- LEVEL 4: UNIT KERJA BAWAHAN -->
+  <!-- Col 1: Di bawah WD I -->
+  <g transform="translate(100, 520)" filter="url(#cardShadow)">
+    <rect width="260" height="54" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="130" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1E293B">Prodi Sarjana Kedokteran (S1)</text>
+    <text x="130" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Ketua &amp; Sekretaris Program Studi S.Ked</text>
+  </g>
+
+  <g transform="translate(100, 586)" filter="url(#cardShadow)">
+    <rect width="260" height="54" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="130" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1E293B">Prodi Profesi Dokter (Koas)</text>
+    <text x="130" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Tahap Kepaniteraan Klinik (dr.)</text>
+  </g>
+
+  <g transform="translate(100, 652)" filter="url(#cardShadow)">
+    <rect width="260" height="54" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="130" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1E293B">Komkordik RS Pendidikan Utama</text>
+    <text x="130" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Koordinasi Klinis RSUD Praya</text>
+  </g>
+
+  <g transform="translate(100, 718)" filter="url(#cardShadow)">
+    <rect width="260" height="54" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="130" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1E293B">Bimbingan &amp; Konseling Mahasiswa</text>
+    <text x="130" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Pendampingan Akademik &amp; Karakter</text>
+  </g>
+
+  <!-- Col 2: Di bawah WD II -->
+  <g transform="translate(470, 520)" filter="url(#cardShadow)">
+    <rect width="260" height="54" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="130" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1E293B">Bagian Tata Usaha &amp; Kepegawaian</text>
+    <text x="130" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Layanan Administrasi Fakultas</text>
+  </g>
+
+  <g transform="translate(470, 586)" filter="url(#cardShadow)">
+    <rect width="260" height="54" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="130" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1E293B">Laboratorium Skills Lab OSCE</text>
+    <text x="130" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Simulasi Medis &amp; Uji Kompetensi</text>
+  </g>
+
+  <g transform="translate(470, 652)" filter="url(#cardShadow)">
+    <rect width="260" height="54" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="130" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1E293B">Laboratorium Anatomi &amp; Biomedik</text>
+    <text x="130" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Histologi, Biokimia, Mikrobiologi</text>
+  </g>
+
+  <g transform="translate(470, 718)" filter="url(#cardShadow)">
+    <rect width="260" height="54" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="130" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1E293B">Perpustakaan Medis Digital</text>
+    <text x="130" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Referensi Ilmiah &amp; Ruang Diskusi PBL</text>
+  </g>
+
+  <!-- Col 3: Di bawah WD III -->
+  <g transform="translate(840, 520)" filter="url(#cardShadow)">
+    <rect width="260" height="54" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="130" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1E293B">Unit Riset &amp; Publikasi Ilmiah</text>
+    <text x="130" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Kedokteran Tropis, Kepulauan &amp; Pariwisata</text>
+  </g>
+
+  <g transform="translate(840, 586)" filter="url(#cardShadow)">
+    <rect width="260" height="54" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="130" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1E293B">Unit Pengabdian Masyarakat</text>
+    <text x="130" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Program Promotif, Preventif &amp; CKG</text>
+  </g>
+
+  <g transform="translate(840, 652)" filter="url(#cardShadow)">
+    <rect width="260" height="54" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="130" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1E293B">Jejaring RS &amp; Wahana Puskesmas NTB</text>
+    <text x="130" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500" fill="#64748B">PKS Kerjasama Layanan Primer &amp; Rujukan</text>
+  </g>
+
+  <g transform="translate(840, 718)" filter="url(#cardShadow)">
+    <rect width="260" height="54" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="130" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1E293B">Hubungan Alumni &amp; Tracer Study</text>
+    <text x="130" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Pengembangan Karir Calon Dokter</text>
+  </g>
+
+  <!-- Footer Indicator -->
+  <g transform="translate(40, 804)">
+    <text x="560" y="16" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">
+      Fakultas Kedokteran Universitas Bumigora • Mataram, Nusa Tenggara Barat • Disahkan oleh Senat &amp; Dekanat FK UBG
+    </text>
+  </g>
+</svg>
