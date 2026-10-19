@@ -221,3 +221,4 @@ php artisan test
 
 ## 📄 Hak Cipta & Lisensi
 Hak cipta © 2026 **Fakultas Kedokteran Universitas Bumigora**. Seluruh materi, lambang, dan identitas institusi dilindungi undang-undang.
+# profilfk
