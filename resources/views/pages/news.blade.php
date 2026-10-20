@@ -102,7 +102,7 @@
                             <div class="h-48 relative overflow-hidden bg-steel-100">
                                 @if($item->featured_image)
                                     <img 
-                                        src="{{ asset($item->featured_image) }}" 
+                                        src="{{ $item->image_src ?? asset($item->featured_image) }}" 
                                         alt="{{ $item->title }}" 
                                         class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                                         loading="lazy"

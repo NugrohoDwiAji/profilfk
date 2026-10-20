@@ -49,4 +49,23 @@ class News extends Model
 
         return max(1, (int) ceil($words / 200));
     }
+
+    public function getImageSrcAttribute(): ?string
+    {
+        if (! $this->featured_image) {
+            return null;
+        }
+
+        if (str_starts_with($this->featured_image, 'http://') || str_starts_with($this->featured_image, 'https://')) {
+            return $this->featured_image;
+        }
+
+        $cleaned = ltrim($this->featured_image, '/');
+
+        if (file_exists(public_path($cleaned))) {
+            return asset($cleaned);
+        }
+
+        return asset('storage/'.$cleaned);
+    }
 }

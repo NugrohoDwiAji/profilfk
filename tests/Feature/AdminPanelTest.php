@@ -140,6 +140,22 @@ class AdminPanelTest extends TestCase
         $createResponse->assertSee('fi-width-full');
     }
 
+    public function test_news_admin_page_renders_image_field_and_column(): void
+    {
+        $user = User::factory()->create();
+
+        // Index page renders image column
+        $indexResponse = $this->actingAs($user)->get('/admin/news');
+        $indexResponse->assertStatus(200);
+        $indexResponse->assertSee('Sampul');
+
+        // Create page renders image upload field and full width container
+        $createResponse = $this->actingAs($user)->get('/admin/news/create');
+        $createResponse->assertStatus(200);
+        $createResponse->assertSee('Foto / Gambar Sampul Berita');
+        $createResponse->assertSee('fi-width-full');
+    }
+
     public function test_authenticated_admin_can_access_edit_pages_for_multilingual_resources(): void
     {
         $user = User::factory()->create();

@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Models\Facility;
 use App\Models\FacultyMember;
 use App\Models\Gallery;
+use App\Models\News;
 use App\Models\OrganizationStructure;
 use App\Models\TeachingHospital;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -98,6 +99,28 @@ class FileCleanupTest extends TestCase
         $gallery->delete();
 
         Storage::disk('public')->assertMissing('galleries/photo_test.jpg');
+    }
+
+    public function test_deleting_news_deletes_featured_image_from_storage(): void
+    {
+        Storage::fake('public');
+
+        Storage::disk('public')->put('news/news_test.jpg', 'news-bytes');
+        Storage::disk('public')->assertExists('news/news_test.jpg');
+
+        $news = News::create([
+            'title' => 'Berita Uji Coba Hapus',
+            'slug' => 'berita-uji-coba-hapus',
+            'category' => 'Akademik',
+            'excerpt' => 'Ringkasan berita uji coba.',
+            'content' => 'Konten berita uji coba.',
+            'featured_image' => 'news/news_test.jpg',
+            'status' => 'published',
+        ]);
+
+        $news->delete();
+
+        Storage::disk('public')->assertMissing('news/news_test.jpg');
     }
 
     public function test_static_images_in_public_images_are_never_deleted(): void

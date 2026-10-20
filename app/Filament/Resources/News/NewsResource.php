@@ -13,6 +13,7 @@ use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
@@ -20,6 +21,7 @@ use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
@@ -50,7 +52,7 @@ class NewsResource extends Resource
                     ->schema([
                         TranslatableInput::text('title', 'Judul Berita', required: true),
 
-                        Grid::make(3)
+                        Grid::make(4)
                             ->schema([
                                 TextInput::make('slug')
                                     ->required()
@@ -74,18 +76,27 @@ class NewsResource extends Resource
                                     ])
                                     ->default('published')
                                     ->required(),
-                            ]),
-
-                        Grid::make(2)
-                            ->schema([
                                 DateTimePicker::make('published_at')
                                     ->label('Jadwal / Waktu Publikasi')
                                     ->default(now()),
-                                TextInput::make('featured_image')
-                                    ->label('Path / URL Gambar Sampul')
-                                    ->placeholder('/images/facilities/anatomy-lab.jpg')
-                                    ->helperText('Contoh path: /images/facilities/... atau link URL gambar luar.'),
                             ]),
+
+                        FileUpload::make('featured_image')
+                            ->label('Foto / Gambar Sampul Berita')
+                            ->image()
+                            ->imageEditor()
+                            ->imageCropAspectRatio('16:9')
+                            ->imageEditorAspectRatios([
+                                '16:9',
+                                '16:10',
+                                '4:3',
+                                '1:1',
+                            ])
+                            ->directory('news')
+                            ->disk('public')
+                            ->visibility('public')
+                            ->maxSize(5120)
+                            ->helperText('Unggah gambar sampul berita (JPG/PNG/WebP, disarankan rasio lanskap 16:9 atau 16:10, maks. 5MB).'),
 
                         TranslatableInput::textarea('excerpt', 'Kutipan Singkat (Excerpt)', required: true, rows: 3),
 
@@ -98,6 +109,13 @@ class NewsResource extends Resource
     {
         return $table
             ->columns([
+                ImageColumn::make('featured_image')
+                    ->label('Sampul')
+                    ->checkFileExistence(false)
+                    ->state(fn (News $record): ?string => $record->image_src)
+                    ->height(48)
+                    ->width(72)
+                    ->extraImgAttributes(['class' => 'object-cover rounded-lg shadow-2xs border border-steel-200/80']),
                 TextColumn::make('title')
                     ->label('Judul')
                     ->searchable()

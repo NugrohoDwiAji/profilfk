@@ -42,7 +42,7 @@
         @if($article->featured_image)
             <div class="rounded-2xl overflow-hidden mb-10 border border-border-subtle bg-white shadow-xs">
                 <img 
-                    src="{{ asset($article->featured_image) }}" 
+                    src="{{ $article->image_src ?? asset($article->featured_image) }}" 
                     alt="{{ $article->title }}" 
                     class="w-full max-h-[460px] object-cover"
                 >
