@@ -104,8 +104,7 @@
             class="mb-6 lg:mb-8"
         />
 
-        <!-- Molecule: Scope Toggle Switch (Fakultas vs Program Studi) -->
-        <x-molecules.scope-toggle active-var="activeScope" />
+
 
         <!-- Organism 1: Visi & Misi Fakultas (Dari Database) -->
         <div 
@@ -117,38 +116,7 @@
             <x-organisms.vision-mission-grid :record="$facultyVisionMission" theme="blue" />
         </div>
 
-        <!-- Organism 2: Visi & Misi Program Studi (Dari Database) -->
-        <div 
-            x-show="activeScope === 'prodi'"
-            x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="opacity-0 translate-y-2"
-            x-transition:enter-end="opacity-100 translate-y-0"
-            style="display: none;"
-        >
-            <!-- Molecule: Sub-pill Selector for Prodi Levels -->
-            <x-molecules.prodi-subtab active-var="prodiTab" />
-
-            <!-- Sub-organism 2A: Prodi Sarjana Kedokteran (S1) -->
-            <div 
-                x-show="prodiTab === 'sarjana'"
-                x-transition:enter="transition ease-out duration-150"
-                x-transition:enter-start="opacity-0 translate-y-1"
-                x-transition:enter-end="opacity-100 translate-y-0"
-            >
-                <x-organisms.vision-mission-grid :record="$prodiSarjanaVisionMission" theme="blue" />
-            </div>
-
-            <!-- Sub-organism 2B: Prodi Profesi Dokter (Koas) -->
-            <div 
-                x-show="prodiTab === 'profesi'"
-                x-transition:enter="transition ease-out duration-150"
-                x-transition:enter-start="opacity-0 translate-y-1"
-                x-transition:enter-end="opacity-100 translate-y-0"
-                style="display: none;"
-            >
-                <x-organisms.vision-mission-grid :record="$prodiProfesiVisionMission" theme="emerald" />
-            </div>
-        </div>
+     
     </div>
 </section>
 
