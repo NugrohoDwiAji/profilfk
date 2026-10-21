@@ -34,7 +34,7 @@
             </h1>
 
             <p class="text-base sm:text-lg text-body leading-relaxed border-l-4 border-transparent [border-image:linear-gradient(to_bottom,#08244b,#2466c1,#08244b)_1] pl-4 italic">
-                {{ $article->excerpt }}
+                {{ strip_tags($article->excerpt) }}
             </p>
         </div>
 
@@ -52,7 +52,7 @@
         <!-- Article Body -->
         <article class="bg-white rounded-2xl p-6 sm:p-10 border border-border-subtle shadow-2xs space-y-6 text-heading leading-relaxed text-base">
             <div class="prose max-w-none text-body">
-                {!! nl2br(e($article->content)) !!}
+                {!! $article->content !== strip_tags($article->content) ? $article->content : nl2br(e($article->content)) !!}
             </div>
 
             <div class="pt-6 border-t border-border-subtle flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-body">
@@ -85,7 +85,7 @@
                                     </a>
                                 </h4>
                                 <p class="text-xs text-body line-clamp-2">
-                                    {{ $related->excerpt }}
+                                    {{ strip_tags($related->excerpt) }}
                                 </p>
                             </div>
                             <div class="pt-3 mt-3 border-t border-border-subtle text-[11px]">

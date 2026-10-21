@@ -103,7 +103,7 @@
                     @php
                         $academicPillars = [
                             [
-                                'tag' => __('Pilar 01 · Kurikulum'),
+                                'tag' => __('01 · Kurikulum'),
                                 'title' => __('Kurikulum Terintegrasi'),
                                 'subtitle' => __('Problem-Based Learning & Blok'),
                                 'icon' => 'check',
@@ -111,7 +111,7 @@
                                 'animation' => 'animate-hero-pillar-left-1',
                             ],
                             [
-                                'tag' => __('Pilar 02 · Simulasi'),
+                                'tag' => __('02 · Simulasi'),
                                 'title' => __('Skills Lab & OSCE'),
                                 'subtitle' => __('Simulasi Klinis Standar Nasional'),
                                 'icon' => 'stethoscope',
@@ -119,7 +119,7 @@
                                 'animation' => 'animate-hero-pillar-right-1',
                             ],
                             [
-                                'tag' => __('Pilar 03 · Rumah Sakit'),
+                                'tag' => __('03 · Rumah Sakit'),
                                 'title' => __('RSUD Praya'),
                                 'subtitle' => __('RS Pendidikan Jejaring Utama'),
                                 'icon' => 'building',
@@ -127,7 +127,7 @@
                                 'animation' => 'animate-hero-pillar-right-2',
                             ],
                             [
-                                'tag' => __('Pilar 04 · Komunitas'),
+                                'tag' => __('04 · Komunitas'),
                                 'title' => __('Kedokteran Komunitas'),
                                 'subtitle' => __('Layanan Primer & Humanis'),
                                 'icon' => 'heart-pulse',
@@ -632,7 +632,7 @@
                                 </h3>
 
                                 <p class="text-xs text-body leading-relaxed line-clamp-3">
-                                    {{ $item->excerpt }}
+                                    {{ strip_tags($item->excerpt) }}
                                 </p>
                             </div>
                         </div>

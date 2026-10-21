@@ -154,6 +154,21 @@ class AdminPanelTest extends TestCase
         $createResponse->assertStatus(200);
         $createResponse->assertSee('Foto / Gambar Sampul Berita');
         $createResponse->assertSee('fi-width-full');
+
+        // Edit page renders full width container
+        $news = News::create([
+            'title' => 'Judul Berita Edit Test',
+            'slug' => 'judul-berita-edit-test',
+            'excerpt' => 'Ringkasan',
+            'content' => 'Konten',
+            'category' => 'Akademik',
+            'status' => 'published',
+            'published_at' => now(),
+        ]);
+
+        $editResponse = $this->actingAs($user)->get("/admin/news/{$news->id}/edit");
+        $editResponse->assertStatus(200);
+        $editResponse->assertSee('fi-width-full');
     }
 
     public function test_authenticated_admin_can_access_edit_pages_for_multilingual_resources(): void

@@ -46,13 +46,16 @@ class NewsResource extends Resource
     public static function form(Schema $schema): Schema
     {
         return $schema
+            ->columns(1)
             ->components([
                 Section::make('Konten Berita (3 Bahasa)')
+                    ->columnSpanFull()
                     ->description('Masukkan konten berita dalam Bahasa Indonesia, Inggris, dan Mandarin.')
                     ->schema([
                         TranslatableInput::text('title', 'Judul Berita', required: true),
 
                         Grid::make(4)
+                            ->columnSpanFull()
                             ->schema([
                                 TextInput::make('slug')
                                     ->required()
@@ -84,19 +87,12 @@ class NewsResource extends Resource
                         FileUpload::make('featured_image')
                             ->label('Foto / Gambar Sampul Berita')
                             ->image()
-                            ->imageEditor()
-                            ->imageCropAspectRatio('16:9')
-                            ->imageEditorAspectRatios([
-                                '16:9',
-                                '16:10',
-                                '4:3',
-                                '1:1',
-                            ])
                             ->directory('news')
                             ->disk('public')
                             ->visibility('public')
-                            ->maxSize(5120)
-                            ->helperText('Unggah gambar sampul berita (JPG/PNG/WebP, disarankan rasio lanskap 16:9 atau 16:10, maks. 5MB).'),
+                            ->nullable()
+                            ->columnSpanFull()
+                            ->helperText('Unggah gambar sampul berita (opsional, tanpa batasan ukuran/rasio).'),
 
                         TranslatableInput::textarea('excerpt', 'Kutipan Singkat (Excerpt)', required: true, rows: 3),
 

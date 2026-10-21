@@ -78,6 +78,28 @@ class LandingPageTest extends TestCase
         $response->assertSee('Konten lengkap perkuliahan perdana di aula kampus.');
     }
 
+    public function test_news_detail_renders_rich_html_content_without_escaping_tags(): void
+    {
+        $news = News::create([
+            'title' => 'Berita Format HTML',
+            'slug' => 'berita-format-html',
+            'category' => 'Akademik',
+            'excerpt' => '<p>Kutipan dengan tag html</p>',
+            'content' => '<p>Paragraf pertama isi berita.</p><p>Paragraf kedua.</p>',
+            'published_at' => now()->subDay(),
+            'status' => 'published',
+        ]);
+
+        $response = $this->get('/berita/'.$news->slug);
+
+        $response->assertStatus(200);
+        $response->assertSee('<p>Paragraf pertama isi berita.</p>', false);
+        $response->assertDontSee('&lt;p&gt;Paragraf pertama isi berita.&lt;/p&gt;', false);
+        // Excerpt should have tags stripped
+        $response->assertSee('Kutipan dengan tag html', false);
+        $response->assertDontSee('&lt;p&gt;Kutipan dengan tag html&lt;/p&gt;', false);
+    }
+
     public function test_news_detail_page_returns_404_for_draft_news(): void
     {
         $draft = News::create([

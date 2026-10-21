@@ -43,16 +43,16 @@ class MultilingualLocalizationTest extends TestCase
         $response->assertSee('Main Navigation');
 
         // Hero 4 Academic Pillars in English
-        $response->assertSee('Pillar 01 · Curriculum');
+        $response->assertSee('01 · Curriculum');
         $response->assertSee('Integrated Curriculum');
         $response->assertSee('Problem-Based Learning & Blocks');
-        $response->assertSee('Pillar 02 · Simulation');
+        $response->assertSee('02 · Simulation');
         $response->assertSee('Skills Lab & OSCE');
         $response->assertSee('National Standard Clinical Simulation');
-        $response->assertSee('Pillar 03 · Teaching Hospital');
+        $response->assertSee('03 · Teaching Hospital');
         $response->assertSee('RSUD Praya Hospital');
         $response->assertSee('Main Teaching Hospital Network');
-        $response->assertSee('Pillar 04 · Community');
+        $response->assertSee('04 · Community');
         $response->assertSee('Community Medicine');
         $response->assertSee('Primary Care & Humanism');
     }
@@ -73,16 +73,16 @@ class MultilingualLocalizationTest extends TestCase
         $response->assertSee('主要导航');
 
         // Hero 4 Academic Pillars in Chinese
-        $response->assertSee('支柱 01 · 课程体系');
+        $response->assertSee('01 · 课程体系');
         $response->assertSee('一体化整合课程');
         $response->assertSee('基于问题导向学习 (PBL) 与模块化教学');
-        $response->assertSee('支柱 02 · 模拟教学');
+        $response->assertSee('02 · 模拟教学');
         $response->assertSee('技能中心与 OSCE 考站');
         $response->assertSee('国家标准临床模拟培训');
-        $response->assertSee('支柱 03 · 教学医院');
+        $response->assertSee('03 · 教学医院');
         $response->assertSee('普拉亚综合医院 (RSUD Praya)');
         $response->assertSee('核心教学医院网络');
-        $response->assertSee('支柱 04 · 社区医学');
+        $response->assertSee('04 · 社区医学');
         $response->assertSee('社区医学');
         $response->assertSee('基层初级诊疗与人文关怀');
     }

@@ -135,7 +135,7 @@
                                 </h2>
 
                                 <p class="text-xs text-body leading-relaxed line-clamp-3">
-                                    {{ $item->excerpt }}
+                                    {{ strip_tags($item->excerpt) }}
                                 </p>
                             </div>
                         </div>

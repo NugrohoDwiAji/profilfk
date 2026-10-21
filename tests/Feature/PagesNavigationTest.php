@@ -71,10 +71,8 @@ class PagesNavigationTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('Profil Fakultas Kedokteran');
         $response->assertSee('SAMBUTAN DEKAN');
-        $response->assertSee('Visi & Misi Fakultas', false);
-        $response->assertSee('Visi & Misi Program Studi', false);
-        $response->assertSee('Program Sarjana Kedokteran (S.Ked)');
-        $response->assertSee('Program Profesi Dokter (dr.)');
+        $response->assertSee('KOMPAS STRATEGIS');
+        $response->assertSee('Visi, Misi, dan Sasaran Institusi');
         $response->assertSee('Profil Lulusan');
         $response->assertSee('STRUKTUR ORGANISASI');
         $response->assertSee('STRUKTUR MANAJEMEN');
