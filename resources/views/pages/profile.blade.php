@@ -95,7 +95,7 @@
 </section>
 
 <!-- Visi, Misi, dan Tujuan (Atomic Design Organism) -->
-<section class="py-16 lg:py-24 bg-surface border-b border-border-subtle" x-data="{ activeScope: 'fakultas', prodiTab: 'sarjana' }">
+<section class="py-16 lg:py-24 bg-surface border-b border-border-subtle" x-data="{ activeScope: 'fakultas' }">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <x-section-heading 
             :eyebrow="__('KOMPAS STRATEGIS')"
@@ -104,7 +104,8 @@
             class="mb-6 lg:mb-8"
         />
 
-
+        <!-- Molecule: Scope Toggle Switch (Fakultas vs Program Studi) -->
+        <x-molecules.scope-toggle active-var="activeScope" />
 
         <!-- Organism 1: Visi & Misi Fakultas (Dari Database) -->
         <div 
@@ -116,7 +117,16 @@
             <x-organisms.vision-mission-grid :record="$facultyVisionMission" theme="blue" />
         </div>
 
-     
+        <!-- Organism 2: Visi & Misi Program Studi Sarjana Kedokteran (Dari Database) -->
+        <div 
+            x-show="activeScope === 'prodi'"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            style="display: none;"
+        >
+            <x-organisms.vision-mission-grid :record="$prodiSarjanaVisionMission" theme="blue" />
+        </div>
     </div>
 </section>
 

@@ -73,6 +73,9 @@ class PagesNavigationTest extends TestCase
         $response->assertSee('SAMBUTAN DEKAN');
         $response->assertSee('KOMPAS STRATEGIS');
         $response->assertSee('Visi, Misi, dan Sasaran Institusi');
+        $response->assertSee('Visi & Misi Fakultas', false);
+        $response->assertSee('Visi & Misi Program Studi', false);
+        $response->assertSee('VISI PRODI SARJANA KEDOKTERAN');
         $response->assertSee('Profil Lulusan');
         $response->assertSee('STRUKTUR ORGANISASI');
         $response->assertSee('STRUKTUR MANAJEMEN');
