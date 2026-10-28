@@ -48,9 +48,6 @@
                             <p class="text-xs font-semibold bg-gradient-to-r from-[#08244b] via-[#2466c1] to-[#08244b] bg-clip-text text-transparent mt-0.5">
                                 {{ __('Dekan Fakultas Kedokteran UBG') }}
                             </p>
-                            <p class="text-[11px] text-body mt-1">
-                                {{ __('Pakar Pendidikan Kedokteran & Kesehatan Masyarakat') }}
-                            </p>
                         </div>
                     </div>
                 </div>
