@@ -296,66 +296,52 @@
 <section class="py-16 lg:py-24 bg-white border-b border-border-subtle">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <x-section-heading 
-            :eyebrow="__('KURIKULUM KLINIS PROFESI')"
-            :title="__('Tahapan Rotasi Dokter Muda (Koas)')"
-            :subtitle="__('Struktur pembelajaran kepaniteraan klinik 4 semester di wahana rumah sakit pendidikan dan satelit pelayanan kesehatan.')"
+            :eyebrow="__('PENGEMBANGAN PENDIDIKAN PROFESI DOKTER')"
+            :title="__('Persiapan Penyelenggaraan Pendidikan Profesi Dokter')"
+            :subtitle="__('Fakultas Kedokteran Universitas Bumigora tengah mempersiapkan penyelenggaraan pendidikan profesi dokter sebagai kelanjutan dari tahap pendidikan sarjana kedokteran. Persiapan dilakukan melalui pengembangan kurikulum, penguatan sumber daya pendidikan, serta kerja sama dengan rumah sakit dan fasilitas pelayanan kesehatan sebagai wahana pembelajaran klinis.')"
         />
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Stage 1 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Item 1 -->
             <div class="p-6 rounded-2xl bg-surface border border-border-subtle shadow-2xs space-y-3 relative group hover:border-[#2466C1]/40 transition-all">
                 <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#08244b]/15 to-[#2466c1]/20 text-[#2466C1] flex items-center justify-center font-bold text-sm">
                     01
                 </div>
-                <h4 class="text-base font-bold text-heading">{{ __('Stase Mayor Primer') }}</h4>
-                <p class="text-xs text-body leading-relaxed">
-                    {{ __('Rotasi intensif di Departemen Ilmu Penyakit Dalam dan Ilmu Kesehatan Anak. Fokus pada anamnesis mendalam, pemeriksaan fisik terstandar, dan terapi rasional.') }}
-                </p>
-                <div class="pt-2 text-[11px] font-semibold text-[#2466C1]">
-                    {{ __('Lokasi:') }} RSUD Praya
+                <div>
+                    <h4 class="text-base font-bold text-heading">{{ __('Penguatan Wahana Pendidikan Klinik') }}</h4>
+                    <span class="text-xs font-semibold text-[#2466C1] block mt-1">{{ __('Rumah Sakit dan Fasilitas Kesehatan Jejaring') }}</span>
                 </div>
+                <p class="text-xs text-body leading-relaxed">
+                    {{ __('Pengembangan kerja sama dengan rumah sakit dan fasilitas pelayanan kesehatan untuk mendukung pelaksanaan kepaniteraan klinik serta memberikan pengalaman pembelajaran sesuai kebutuhan pendidikan profesi dokter.') }}
+                </p>
             </div>
 
-            <!-- Stage 2 -->
+            <!-- Item 2 -->
             <div class="p-6 rounded-2xl bg-surface border border-border-subtle shadow-2xs space-y-3 relative group hover:border-[#2466C1]/40 transition-all">
                 <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#08244b]/15 to-[#2466c1]/20 text-[#2466C1] flex items-center justify-center font-bold text-sm">
                     02
                 </div>
-                <h4 class="text-base font-bold text-heading">{{ __('Stase Mayor Bedah & Obgyn') }}</h4>
-                <p class="text-xs text-body leading-relaxed">
-                    {{ __('Kepaniteraan di Departemen Ilmu Bedah dan Obstetri-Ginekologi. Pembelajaran prosedur kamar operasi, persalinan normal, serta penanganan kasus gawat darurat bedah.') }}
-                </p>
-                <div class="pt-2 text-[11px] font-semibold text-[#2466C1]">
-                    {{ __('Lokasi:') }} RSUD Praya
+                <div>
+                    <h4 class="text-base font-bold text-heading">{{ __('Penyiapan Dosen dan Pembimbing Klinik') }}</h4>
+                    <span class="text-xs font-semibold text-[#2466C1] block mt-1">{{ __('Penguatan Sumber Daya Pendidikan') }}</span>
                 </div>
+                <p class="text-xs text-body leading-relaxed">
+                    {{ __('Penyiapan tenaga pendidik dan dokter pembimbing klinis untuk mendukung proses pembelajaran, supervisi, serta penilaian kompetensi mahasiswa selama pendidikan profesi dokter.') }}
+                </p>
             </div>
 
-            <!-- Stage 3 -->
+            <!-- Item 3 -->
             <div class="p-6 rounded-2xl bg-surface border border-border-subtle shadow-2xs space-y-3 relative group hover:border-[#2466C1]/40 transition-all">
                 <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#08244b]/15 to-[#2466c1]/20 text-[#2466C1] flex items-center justify-center font-bold text-sm">
                     03
                 </div>
-                <h4 class="text-base font-bold text-heading">{{ __('Stase Minor Spesialistik') }}</h4>
+                <div>
+                    <h4 class="text-base font-bold text-heading">{{ __('Persiapan Sarana dan Sistem Evaluasi') }}</h4>
+                    <span class="text-xs font-semibold text-[#2466C1] block mt-1">{{ __('Penjaminan Mutu Pendidikan Profesi') }}</span>
+                </div>
                 <p class="text-xs text-body leading-relaxed">
-                    {{ __('Rotasi terarah pada spesialisasi Mata, THT-KL, Neurologi, Psikiatri, Kulit & Kelamin, Anestesiologi, Radiologi, serta Forensik Medikolegal.') }}
+                    {{ __('Pengembangan sarana pembelajaran klinis, sistem penilaian kompetensi, dan mekanisme penjaminan mutu sebagai bagian dari persiapan penyelenggaraan pendidikan profesi dokter.') }}
                 </p>
-                <div class="pt-2 text-[11px] font-semibold text-[#2466C1]">
-                    {{ __('Lokasi:') }} {{ __('RS Jejaring Spesialis') }}
-                </div>
-            </div>
-
-            <!-- Stage 4 -->
-            <div class="p-6 rounded-2xl bg-surface border border-border-subtle shadow-2xs space-y-3 relative group hover:border-[#2466C1]/40 transition-all">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#08244b]/15 to-[#2466c1]/20 text-[#2466C1] flex items-center justify-center font-bold text-sm">
-                    04
-                </div>
-                <h4 class="text-base font-bold text-heading">{{ __('Komprehensif & UKMPPD') }}</h4>
-                <p class="text-xs text-body leading-relaxed">
-                    {{ __('Kedokteran Komunitas di Puskesmas, penguatan penalaran klinis terpadu, bimbingan intensif persiapan Uji Kompetensi Mahasiswa Program Profesi Dokter (UKMPPD).') }}
-                </p>
-                <div class="pt-2 text-[11px] font-semibold text-[#2466C1]">
-                    {{ __('Lokasi:') }} {{ __('Puskesmas & Kampus UBG') }}
-                </div>
             </div>
         </div>
     </div>

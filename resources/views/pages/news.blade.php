@@ -124,8 +124,6 @@
                                 <div class="flex items-center gap-2 text-[11px] text-steel-500">
                                     <x-icon name="calendar" class="w-3.5 h-3.5 shrink-0" />
                                     <span>{{ $item->published_at ? $item->published_at->translatedFormat('d F Y') : '-' }}</span>
-                                    <span>•</span>
-                                    <span>{{ $item->reading_time }} {{ __('mnt baca') }}</span>
                                 </div>
 
                                 <h2 class="text-base font-bold text-heading leading-snug group-hover:text-[#2466C1] transition-colors line-clamp-2">

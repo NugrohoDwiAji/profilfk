@@ -20,7 +20,11 @@ class LandingPageTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('Fakultas Kedokteran');
         $response->assertSee('Universitas Bumigora');
-        $response->assertSee('Menyiapkan Dokter Masa Depan yang Kompeten dan Humanis');
+        $response->assertSee('Pendidikan Kedokteran Berbasis Inovasi dengan Keunggulan Kesehatan Paru dan Gizi Anak');
+        $response->assertSee('01 — KURIKULUM');
+        $response->assertSee('02 — KETERAMPILAN KLINIS');
+        $response->assertSee('03 — JEJARING PENDIDIKAN');
+        $response->assertSee('04 — KEUNGGULAN PROGRAM STUDI');
     }
 
     public function test_published_news_appears_on_homepage(): void

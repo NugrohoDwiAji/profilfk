@@ -325,13 +325,13 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-12">
             <span class="text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-[#08244b] via-[#2466c1] to-[#08244b] bg-clip-text text-transparent">
-                {{ __('PENDEKATAN PEMBELAJARAN') }}
+                {{ __('PROSES PEMBELAJARAN') }}
             </span>
             <h2 class="text-2xl sm:text-3xl font-extrabold text-heading tracking-tight mt-2">
-                {{ __('Metodologi Pendidikan Kedokteran Modern') }}
+                {{ __('Pendekatan Pembelajaran di Fakultas Kedokteran') }}
             </h2>
             <p class="text-sm sm:text-base text-body mt-2.5">
-                {{ __('Mengintegrasikan penalaran ilmiah, simulasi laboratorium terstandar, dan keterlibatan komunitas sejak awal masa perkuliahan.') }}
+                {{ __('Proses pendidikan di Fakultas Kedokteran Universitas Bumigora dilaksanakan melalui pembelajaran terintegrasi yang memadukan penguasaan ilmu kedokteran, diskusi kasus, praktikum laboratorium, dan latihan keterampilan klinis.') }}
             </p>
         </div>
 

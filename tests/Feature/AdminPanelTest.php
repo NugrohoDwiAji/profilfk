@@ -507,12 +507,15 @@ class AdminPanelTest extends TestCase
         $createResponse->assertSee('Foto &amp; Keterangan Galeri', false);
         $createResponse->assertSee('Foto / Gambar Galeri', false);
         $createResponse->assertSee('Judul Foto');
+        $createResponse->assertSee('Akademik');
+        $createResponse->assertSee('Keterampilan Klinis');
+        $createResponse->assertSee('Pengabdian Masyarakat');
 
         // 3. Database record reflects on public gallery page
         Gallery::create([
             'title' => 'Dokumentasi Praktikum Anatomi Kadaver Sintetik',
             'image_url' => 'facilities/anatomy-lab.jpg',
-            'category' => 'Fasilitas & Lab',
+            'category' => 'Akademik',
             'description' => 'Sesi praktikum struktur anatomi mahasiswa kedokteran tahun pertama.',
             'sort_order' => 1,
             'is_active' => true,
@@ -521,7 +524,7 @@ class AdminPanelTest extends TestCase
         $galleryResponse = $this->get('/galeri');
         $galleryResponse->assertStatus(200);
         $galleryResponse->assertSee('Dokumentasi Praktikum Anatomi Kadaver Sintetik');
-        $galleryResponse->assertSee('Fasilitas &amp; Lab', false);
+        $galleryResponse->assertSee('Akademik', false);
     }
 
     public function test_teaching_hospital_admin_pages_render_and_can_create_record(): void

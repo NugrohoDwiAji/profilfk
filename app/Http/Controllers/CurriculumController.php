@@ -230,28 +230,28 @@ class CurriculumController extends Controller
         // 4. Learning Method Pillars
         $methods = [
             [
-                'title' => 'Problem-Based Learning (PBL)',
-                'subtitle' => 'Diskusi Tutorial Seven Jumps',
-                'description' => 'Mahasiswa belajar memecahkan skenario kasus klinis nyata dalam kelompok kecil terarah dipandu tutor dosen medis berpengalaman.',
-                'icon' => 'check',
+                'title' => '01. Pembelajaran Berbasis Masalah (PBL)',
+                'subtitle' => 'Diskusi Tutorial',
+                'description' => 'Mahasiswa mempelajari berbagai permasalahan kesehatan melalui diskusi kelompok kecil yang didampingi oleh dosen tutor. Kegiatan ini bertujuan mengembangkan kemampuan berpikir kritis, penalaran klinis, dan kerja sama.',
+                'icon' => 'book-open',
             ],
             [
-                'title' => 'Skills Lab & OSCE Berstandar Nasional',
-                'subtitle' => 'Pelatihan Simulasi Klinis',
-                'description' => 'Latihan prosedur medis menggunakan manikin berteknologi tinggi dan simulasi pasien terstandar sebelum berinteraksi dengan pasien nyata.',
+                'title' => '02. Laboratorium Keterampilan Klinis',
+                'subtitle' => 'Clinical Skills Lab (CSL) dan OSCE',
+                'description' => 'Mahasiswa berlatih keterampilan klinis melalui simulasi, mulai dari komunikasi dengan pasien, anamnesis, pemeriksaan fisik, hingga prosedur medis dasar. Kompetensi mahasiswa dievaluasi melalui penilaian keterampilan klinis, termasuk OSCE.',
                 'icon' => 'stethoscope',
             ],
             [
-                'title' => 'Early Clinical Exposure (ECE)',
-                'subtitle' => 'Pengenalan Klinis Sejak Dini',
-                'description' => 'Kunjungan dan observasi langsung ke fasilitas layanan kesehatan primer dan rumah sakit jejaring sejak tahun pertama perkuliahan.',
-                'icon' => 'building',
+                'title' => '03. Pengenalan Klinis Sejak Dini',
+                'subtitle' => 'Early Clinical Exposure (ECE)',
+                'description' => 'Mahasiswa diperkenalkan dengan lingkungan pelayanan kesehatan melalui kegiatan pembelajaran dan observasi di fasilitas kesehatan jejaring. Kegiatan ini membantu mahasiswa memahami penerapan ilmu kedokteran dalam praktik pelayanan kesehatan.',
+                'icon' => 'hospital',
             ],
             [
-                'title' => 'Keunggulan Kedokteran Pariwisata',
-                'subtitle' => 'Kontekstual Wilayah NTB',
-                'description' => 'Pengayaan kompetensi penanganan kegawatdaruratan kelautan, penyakit perjalanan (travel diseases), dan evakuasi medis pariwisata.',
-                'icon' => 'award',
+                'title' => '04. Penguatan Keunggulan Keilmuan',
+                'subtitle' => 'Pencegahan Penyakit Infeksi Paru dan Masalah Gizi Anak',
+                'description' => 'Pembelajaran diarahkan untuk mendukung pengembangan keunggulan program studi dalam bidang pencegahan penyakit infeksi paru yang berkaitan dengan masalah gizi pada anak, melalui pendekatan akademik, penelitian, dan pengabdian kepada masyarakat.',
+                'icon' => 'heart-pulse',
             ],
         ];
 

@@ -20,7 +20,7 @@ class GalleryController extends Controller
         }
 
         $galleries = $query->paginate(12)->withQueryString();
-        $categories = Gallery::active()->pluck('category')->unique()->filter()->values();
+        $categories = array_keys(Gallery::CATEGORIES);
 
         return view('pages.gallery', compact('galleries', 'categories'));
     }

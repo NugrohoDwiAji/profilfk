@@ -28,12 +28,12 @@
 
                 <!-- Headline -->
                 <h1 class="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-extrabold text-heading tracking-tight leading-[1.15] text-balance">
-                    {{ __('Menyiapkan Dokter Masa Depan yang Kompeten dan Humanis') }}
+                    {{ __('Pendidikan Kedokteran Berbasis Inovasi dengan Keunggulan Kesehatan Paru dan Gizi Anak') }}
                 </h1>
 
                 <!-- Description -->
                 <p class="text-base sm:text-lg text-body leading-relaxed max-w-2xl text-balance">
-                    {{ __('Jelajahi perjalanan pendidikan kedokteran yang mengintegrasikan ilmu pengetahuan, keterampilan klinis, etika profesi, dan kepedulian terhadap masyarakat.') }}
+                    {{ __('Fakultas Kedokteran Universitas Bumigora berkomitmen menyelenggarakan pendidikan kedokteran yang berkualitas dengan mengedepankan profesionalitas, inovasi, dan integritas. Melalui penguatan pendidikan, penelitian, dan pengabdian kepada masyarakat, FK UBG mengembangkan keunggulan di bidang pencegahan penyakit infeksi paru yang berkaitan dengan masalah gizi pada anak.') }}
                 </p>
 
                 <!-- Actions -->
@@ -103,33 +103,33 @@
                     @php
                         $academicPillars = [
                             [
-                                'tag' => __('01 · Kurikulum'),
+                                'tag' => __('01 — KURIKULUM'),
                                 'title' => __('Kurikulum Terintegrasi'),
-                                'subtitle' => __('Problem-Based Learning & Blok'),
+                                'subtitle' => __('Pembelajaran Berbasis Masalah dan Keterampilan Klinis'),
                                 'icon' => 'check',
                                 'position' => 'sm:top-10 lg:top-6 xl:top-8 2xl:top-15 sm:-left-8 lg:-left-10 xl:-left-35 2xl:-left-36',
                                 'animation' => 'animate-hero-pillar-left-1',
                             ],
                             [
-                                'tag' => __('02 · Simulasi'),
+                                'tag' => __('02 — KETERAMPILAN KLINIS'),
                                 'title' => __('Skills Lab & OSCE'),
-                                'subtitle' => __('Simulasi Klinis Standar Nasional'),
+                                'subtitle' => __('Penguatan Kompetensi dan Keterampilan Klinis'),
                                 'icon' => 'stethoscope',
                                 'position' => 'sm:top-[24%] sm:-translate-y-1/2 sm:-right-8 lg:-right-10 xl:-right-30 2xl:-right-36',
                                 'animation' => 'animate-hero-pillar-right-1',
                             ],
                             [
-                                'tag' => __('03 · Rumah Sakit'),
-                                'title' => __('RSUD Praya'),
-                                'subtitle' => __('RS Pendidikan Jejaring Utama'),
+                                'tag' => __('03 — JEJARING PENDIDIKAN'),
+                                'title' => __('Rumah Sakit Pendidikan'),
+                                'subtitle' => __('Pembelajaran Klinis melalui Rumah Sakit Jejaring'),
                                 'icon' => 'building',
                                 'position' => 'sm:bottom-8 lg:bottom-6 xl:bottom-8 2xl:bottom-15 sm:-right-4 lg:-right-6 xl:-right-25 2xl:-right-24',
                                 'animation' => 'animate-hero-pillar-right-2',
                             ],
                             [
-                                'tag' => __('04 · Komunitas'),
-                                'title' => __('Kedokteran Komunitas'),
-                                'subtitle' => __('Layanan Primer & Humanis'),
+                                'tag' => __('04 — KEUNGGULAN PROGRAM STUDI'),
+                                'title' => __('Kesehatan Paru dan Gizi Anak'),
+                                'subtitle' => __('Fokus pada Pencegahan Penyakit Infeksi Paru Terkait Masalah Gizi Anak'),
                                 'icon' => 'heart-pulse',
                                 'position' => 'sm:bottom-12 lg:bottom-10 xl:bottom-12 2xl:bottom-20 sm:-left-4 lg:-left-6 xl:-left-25 2xl:-left-24',
                                 'animation' => 'animate-hero-pillar-left-2',
@@ -201,9 +201,10 @@
                             <x-icon name="book-open" class="w-5 h-5 text-[#2466C1]" />
                         </div>
                         <div>
-                            <h4 class="text-sm font-bold text-heading">{{ __('Kurikulum Blok & Problem-Based Learning') }}</h4>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-[#2466C1] block mb-0.5">{{ __('01 — KURIKULUM') }}</span>
+                            <h4 class="text-sm font-bold text-heading">{{ __('Kurikulum Terintegrasi') }}</h4>
                             <p class="text-xs text-body mt-1 leading-relaxed">
-                                {{ __('Mahasiswa dilatih memecahkan skenario kasus klinis nyata sejak dini, melatih penalaran diferensial, penalaran etis, dan kebiasaan belajar mandiri sepanjang hayat.') }}
+                                {{ __('Pembelajaran Berbasis Masalah dan Keterampilan Klinis') }}
                             </p>
                         </div>
                     </div>
@@ -213,9 +214,23 @@
                             <x-icon name="stethoscope" class="w-5 h-5 text-[#2466C1]" />
                         </div>
                         <div>
-                            <h4 class="text-sm font-bold text-heading">{{ __('Skills Lab Terpadu & Standar OSCE') }}</h4>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-[#2466C1] block mb-0.5">{{ __('02 — KETERAMPILAN KLINIS') }}</span>
+                            <h4 class="text-sm font-bold text-heading">{{ __('Skills Lab & OSCE') }}</h4>
                             <p class="text-xs text-body mt-1 leading-relaxed">
-                                {{ __('Laboratorium keterampilan klinis berstandar nasional yang melatih komunikasi terapeutik, pemeriksaan fisik sistem organ, dan tata laksana kegawatdaruratan medis.') }}
+                                {{ __('Penguatan Kompetensi dan Keterampilan Klinis') }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-border-subtle shadow-2xs hover:border-[#2466C1]/30 transition-colors">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-[#08244b]/15 via-[#2466C1]/15 to-[#08244b]/15 text-[#2466C1] flex items-center justify-center shrink-0 mt-0.5">
+                            <x-icon name="hospital" class="w-5 h-5 text-[#2466C1]" />
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-[#2466C1] block mb-0.5">{{ __('03 — JEJARING PENDIDIKAN') }}</span>
+                            <h4 class="text-sm font-bold text-heading">{{ __('Rumah Sakit Pendidikan') }}</h4>
+                            <p class="text-xs text-body mt-1 leading-relaxed">
+                                {{ __('Pembelajaran Klinis melalui Rumah Sakit Jejaring') }}
                             </p>
                         </div>
                     </div>
@@ -225,9 +240,10 @@
                             <x-icon name="heart-pulse" class="w-5 h-5 text-[#2466C1]" />
                         </div>
                         <div>
-                            <h4 class="text-sm font-bold text-heading">{{ __('Orientasi Kedokteran Komunitas & Layanan Primer') }}</h4>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-[#2466C1] block mb-0.5">{{ __('04 — KEUNGGULAN PROGRAM STUDI') }}</span>
+                            <h4 class="text-sm font-bold text-heading">{{ __('Kesehatan Paru dan Gizi Anak') }}</h4>
                             <p class="text-xs text-body mt-1 leading-relaxed">
-                                {{ __('Menanamkan kepekaan sosial dan kompetensi promotif-preventif guna menjawab tantangan kesehatan riil masyarakat kepulauan dan pedesaan.') }}
+                                {{ __('Fokus pada Pencegahan Penyakit Infeksi Paru Terkait Masalah Gizi Anak') }}
                             </p>
                         </div>
                     </div>
@@ -621,8 +637,6 @@
                                 <div class="flex items-center gap-2 text-[11px] text-steel-500">
                                     <x-icon name="calendar" class="w-3 h-3 shrink-0" />
                                     <span>{{ $item->published_at ? $item->published_at->translatedFormat('d F Y') : '-' }}</span>
-                                    <span>•</span>
-                                    <span>{{ $item->reading_time }} {{ __('mnt baca') }}</span>
                                 </div>
 
                                 <h3 class="text-sm font-bold text-heading leading-snug group-hover:text-[#2466C1] transition-colors line-clamp-2">

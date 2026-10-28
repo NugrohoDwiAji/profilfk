@@ -21,7 +21,7 @@
                 {!! __('Galeri Foto & Aktivitas Kampus') !!}
             </h1>
             <p class="text-base sm:text-lg text-body mt-3 leading-relaxed">
-                {{ __('Dokumentasi visual fasilitas laboratorium mutakhir, simulasi keterampilan klinis, kegiatan pembelajaran blok, dan ragam agenda sivitas akademika Fakultas Kedokteran Universitas Bumigora.') }}
+                {{ __('Dokumentasi berbagai kegiatan akademik, penelitian, pengabdian kepada masyarakat, kemahasiswaan, serta kerja sama yang diselenggarakan oleh Fakultas Kedokteran Universitas Bumigora.') }}
             </p>
         </div>
     </div>
@@ -57,7 +57,7 @@
                 href="{{ route('gallery.index') }}" 
                 class="px-4 py-2 rounded-xl text-xs font-semibold uppercase tracking-wider transition-all whitespace-nowrap {{ !request()->filled('category') || request('category') === 'all' ? 'bg-gradient-to-r from-[#08244b] via-[#2466c1] to-[#08244b] text-white shadow-sm' : 'bg-surface text-body hover:bg-steel-50 border border-border-subtle' }}"
             >
-                {{ __('Semua Foto') }}
+                {{ __('Semua Kegiatan') }}
             </a>
             @foreach($categories as $cat)
                 <a 

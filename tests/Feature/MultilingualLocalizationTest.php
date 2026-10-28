@@ -41,20 +41,21 @@ class MultilingualLocalizationTest extends TestCase
         $response->assertSee('About Faculty');
         $response->assertSee('Admission Info');
         $response->assertSee('Main Navigation');
+        $response->assertSee('Innovation-Based Medical Education with Excellence in Pulmonary Health and Child Nutrition');
 
         // Hero 4 Academic Pillars in English
-        $response->assertSee('01 · Curriculum');
+        $response->assertSee('01 — CURRICULUM');
         $response->assertSee('Integrated Curriculum');
-        $response->assertSee('Problem-Based Learning & Blocks');
-        $response->assertSee('02 · Simulation');
+        $response->assertSee('Problem-Based Learning and Clinical Skills');
+        $response->assertSee('02 — CLINICAL SKILLS');
         $response->assertSee('Skills Lab & OSCE');
-        $response->assertSee('National Standard Clinical Simulation');
-        $response->assertSee('03 · Teaching Hospital');
-        $response->assertSee('RSUD Praya Hospital');
-        $response->assertSee('Main Teaching Hospital Network');
-        $response->assertSee('04 · Community');
-        $response->assertSee('Community Medicine');
-        $response->assertSee('Primary Care & Humanism');
+        $response->assertSee('Strengthening Competence and Clinical Skills');
+        $response->assertSee('03 — EDUCATION NETWORK');
+        $response->assertSee('Teaching Hospital');
+        $response->assertSee('Clinical Learning through Network Hospitals');
+        $response->assertSee('04 — STUDY PROGRAM EXCELLENCE');
+        $response->assertSee('Pulmonary Health and Child Nutrition');
+        $response->assertSee('Focus on Preventing Pediatric Pulmonary Infections Linked to Malnutrition');
     }
 
     public function test_home_page_renders_chinese_when_locale_is_zh(): void
@@ -71,20 +72,21 @@ class MultilingualLocalizationTest extends TestCase
         $response->assertSee('了解医学院');
         $response->assertSee('招生信息');
         $response->assertSee('主要导航');
+        $response->assertSee('以创新为导向、以儿童肺部健康与营养为特色的医学教育');
 
         // Hero 4 Academic Pillars in Chinese
-        $response->assertSee('01 · 课程体系');
+        $response->assertSee('01 — 课程体系');
         $response->assertSee('一体化整合课程');
-        $response->assertSee('基于问题导向学习 (PBL) 与模块化教学');
-        $response->assertSee('02 · 模拟教学');
+        $response->assertSee('基于问题导向学习与临床技能培养');
+        $response->assertSee('02 — 临床技能');
         $response->assertSee('技能中心与 OSCE 考站');
-        $response->assertSee('国家标准临床模拟培训');
-        $response->assertSee('03 · 教学医院');
-        $response->assertSee('普拉亚综合医院 (RSUD Praya)');
-        $response->assertSee('核心教学医院网络');
-        $response->assertSee('04 · 社区医学');
-        $response->assertSee('社区医学');
-        $response->assertSee('基层初级诊疗与人文关怀');
+        $response->assertSee('强化专业胜任力与临床技能');
+        $response->assertSee('03 — 教学协作网络');
+        $response->assertSee('教学医院');
+        $response->assertSee('依托协作教学医院开展临床教学');
+        $response->assertSee('04 — 专业特色优势');
+        $response->assertSee('儿童肺部健康与营养');
+        $response->assertSee('聚焦儿童营养不良相关肺部感染性疾病的防治');
     }
 
     public function test_profile_page_renders_in_all_three_languages(): void

@@ -63,28 +63,61 @@
                         {{ __('SAMBUTAN DEKAN') }}
                     </span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-heading tracking-tight mt-1 leading-snug">
-                        {{ __('Menjawab Panggilan Kemanusiaan Melalui Pendidikan Kedokteran Unggul') }}
+                        {{ __('Fakultas Kedokteran Universitas Bumigora') }}
                     </h2>
                 </div>
 
                 <div class="space-y-4 text-body text-sm sm:text-base leading-relaxed">
-                    <p>
-                        <span class="text-heading font-medium">{{ __("Assalamu'alaikum Warahmatullahi Wabarakatuh, Salam Sejahtera, Om Swastiastu, Namo Buddhaya.") }}</span>
+                    <p class="text-heading font-medium">
+                        {{ __('Assalamu’alaikum warahmatullahi wabarakatuh.') }}<br>
+                        {{ __('Salam sejahtera bagi kita semua.') }}
                     </p>
+
                     <p>
-                        {{ __('Selamat datang di Fakultas Kedokteran Universitas Bumigora. Pendirian Fakultas Kedokteran ini lahir dari kesadaran mendalam akan perlunya pemerataan akses pelayanan kesehatan yang bermutu tinggi dan penguatan rasio dokter berkeahlian di Nusa Tenggara Barat serta kawasan Indonesia Timur.') }}
+                        {{ __('Puji syukur kita panjatkan ke hadirat Allah SWT, Tuhan Yang Maha Esa, atas segala rahmat dan karunia-Nya.') }}
                     </p>
+
                     <p>
-                        {{ __('Kami memandang bahwa profesi dokter adalah amanah mulia yang menggabungkan ketajaman analisis sains dengan kelembutan sanubari humanis. Karena itu, kurikulum di FK UBG dibangun di atas pilar Problem-Based Learning, pelatihan simulasi keterampilan klinis yang intensif, penguasaan kedokteran keluarga dan pencegahan primer, serta penanaman etika kedokteran yang kokoh sejak hari pertama perkuliahan.') }}
+                        {{ __('Selamat datang di website resmi Fakultas Kedokteran Universitas Bumigora.') }}
                     </p>
+
                     <p>
-                        {{ __('Bersama rumah sakit pendidikan mitra utama seperti RSUD Praya dan wahana puskesmas di NTB, kami bertekad membimbing putra-putri terbaik bangsa untuk tumbuh menjadi dokter yang tidak hanya mahir secara teknis medis, namun juga berjiwa empati dan siap mengabdi di manapun masyarakat membutuhkan.') }}
+                        {{ __('Pendidikan kedokteran memiliki tanggung jawab yang besar, bukan hanya dalam membekali mahasiswa dengan ilmu pengetahuan dan keterampilan klinis, tetapi juga dalam membentuk sikap profesional, integritas, serta kepedulian terhadap masyarakat. Kami menyadari bahwa menjadi seorang dokter membutuhkan proses pendidikan yang berkelanjutan, ketekunan, dan komitmen untuk senantiasa mengutamakan keselamatan serta kepentingan pasien.') }}
+                    </p>
+
+                    <p>
+                        {{ __('Fakultas Kedokteran Universitas Bumigora hadir dengan komitmen untuk menyelenggarakan pendidikan kedokteran yang berkualitas dan terus berkembang sejalan dengan kemajuan ilmu pengetahuan dan teknologi. Melalui pembelajaran yang terintegrasi, penguatan keterampilan klinis, penelitian, serta pengabdian kepada masyarakat, kami berupaya membangun lingkungan akademik yang mendukung pengembangan kompetensi mahasiswa.') }}
+                    </p>
+
+                    <p>
+                        {{ __('Salah satu arah pengembangan keilmuan kami adalah pencegahan penyakit infeksi paru yang berkaitan dengan masalah gizi pada anak. Keunggulan ini menjadi bagian dari upaya kami untuk mengembangkan pendidikan, penelitian, dan pengabdian kepada masyarakat yang relevan dengan permasalahan kesehatan, khususnya dalam bidang kesehatan anak.') }}
+                    </p>
+
+                    <p>
+                        {{ __('Kami juga meyakini bahwa kualitas pendidikan kedokteran tidak dapat dibangun oleh institusi secara sendiri. Dukungan dan kerja sama dengan rumah sakit pendidikan, fasilitas pelayanan kesehatan, institusi pendidikan, organisasi profesi, pemerintah, serta masyarakat memiliki peran penting dalam mendukung penyelenggaraan pendidikan yang bermutu.') }}
+                    </p>
+
+                    <p>
+                        {{ __('Dengan menjunjung tinggi nilai profesionalitas, inovasi, dan integritas, kami berkomitmen untuk terus memperkuat tata kelola, meningkatkan kualitas sumber daya manusia, serta mengembangkan kerja sama yang memberikan manfaat bagi pendidikan kedokteran dan pelayanan kesehatan.') }}
+                    </p>
+
+                    <p>
+                        {{ __('Melalui website ini, kami berharap masyarakat, calon mahasiswa, orang tua, mitra kerja sama, dan seluruh sivitas akademika dapat mengenal lebih dekat Fakultas Kedokteran Universitas Bumigora, baik dari sisi penyelenggaraan pendidikan, kegiatan akademik, penelitian, maupun pengabdian kepada masyarakat.') }}
+                    </p>
+
+                    <p>
+                        {{ __('Akhir kata, kami menyampaikan terima kasih kepada seluruh pihak yang telah memberikan kepercayaan, dukungan, dan kontribusi bagi perkembangan Fakultas Kedokteran Universitas Bumigora. Semoga setiap langkah yang kita lakukan dapat memberikan manfaat nyata bagi kemajuan pendidikan kedokteran dan peningkatan derajat kesehatan masyarakat.') }}
+                    </p>
+
+                    <p class="text-heading font-medium">
+                        {{ __('Wassalamu’alaikum warahmatullahi wabarakatuh.') }}
                     </p>
                 </div>
 
-                <div class="pt-2 flex items-center gap-4">
+                <div class="pt-4 flex items-center gap-4 border-t border-border-subtle">
                     <div class="h-10 w-1 bg-gradient-to-b from-[#08244b] via-[#2466c1] to-[#08244b] rounded-full"></div>
                     <div>
+                        <div class="text-xs text-body font-medium">{{ __('Hormat kami,') }}</div>
                         <div class="text-sm font-bold text-heading">dr. Karina Anindita, Sp.PD, M.Biomed., FINASIM, AIFO-K</div>
                         <div class="text-xs text-body">{{ __('Dekan Fakultas Kedokteran Universitas Bumigora') }}</div>
                     </div>

@@ -71,6 +71,8 @@ class PagesNavigationTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('Profil Fakultas Kedokteran');
         $response->assertSee('SAMBUTAN DEKAN');
+        $response->assertSee('Selamat datang di website resmi Fakultas Kedokteran Universitas Bumigora.');
+        $response->assertSee('pencegahan penyakit infeksi paru yang berkaitan dengan masalah gizi pada anak');
         $response->assertSee('KOMPAS STRATEGIS');
         $response->assertSee('Visi, Misi, dan Sasaran Institusi');
         $response->assertSee('Visi & Misi Fakultas', false);
@@ -200,6 +202,12 @@ class PagesNavigationTest extends TestCase
         $response->assertSee('Problem-Based Learning');
         $response->assertSee('RSUD Praya');
         $response->assertSee('Kepaniteraan Klinik');
+        $response->assertSee('PROSES PEMBELAJARAN');
+        $response->assertSee('Pendekatan Pembelajaran di Fakultas Kedokteran');
+        $response->assertSee('01. Pembelajaran Berbasis Masalah (PBL)');
+        $response->assertSee('02. Laboratorium Keterampilan Klinis');
+        $response->assertSee('03. Pengenalan Klinis Sejak Dini');
+        $response->assertSee('04. Penguatan Keunggulan Keilmuan');
     }
 
     public function test_gallery_page_is_accessible_and_displays_photos(): void
@@ -207,7 +215,7 @@ class PagesNavigationTest extends TestCase
         Gallery::create([
             'title' => 'Simulasi Manikin Resusitasi Jantung Paru Skills Lab',
             'image_url' => 'facilities/skills-lab.jpg',
-            'category' => 'Cek Kesehatan Gratis (CKG)',
+            'category' => 'Pengabdian Masyarakat',
             'description' => 'Latihan prosedur darurat medis mahasiswa kedokteran.',
             'sort_order' => 1,
             'is_active' => true,
@@ -217,8 +225,10 @@ class PagesNavigationTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertSee('Galeri Foto & Aktivitas Kampus', false);
+        $response->assertSee('Dokumentasi berbagai kegiatan akademik, penelitian, pengabdian kepada masyarakat');
+        $response->assertSee('Semua Kegiatan');
         $response->assertSee('Simulasi Manikin Resusitasi Jantung Paru Skills Lab');
-        $response->assertSee('Cek Kesehatan Gratis (CKG)');
+        $response->assertSee('Pengabdian Masyarakat');
     }
 
     public function test_hospital_page_is_accessible_and_lists_teaching_hospitals(): void
@@ -233,7 +243,11 @@ class PagesNavigationTest extends TestCase
         $response->assertSee('RS Jiwa Mutiara Sukma NTB');
         $response->assertSee('Rumah Sakit Mata NTB');
         $response->assertSee('RS Bhayangkara Mataram');
-        $response->assertSee('Tahapan Rotasi Dokter Muda (Koas)');
+        $response->assertSee('PENGEMBANGAN PENDIDIKAN PROFESI DOKTER');
+        $response->assertSee('Persiapan Penyelenggaraan Pendidikan Profesi Dokter');
+        $response->assertSee('Penguatan Wahana Pendidikan Klinik');
+        $response->assertSee('Penyiapan Dosen dan Pembimbing Klinik');
+        $response->assertSee('Persiapan Sarana dan Sistem Evaluasi');
     }
 
     public function test_active_menu_indicator_highlights_corresponding_page(): void

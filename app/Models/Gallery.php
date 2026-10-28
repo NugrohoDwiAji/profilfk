@@ -16,12 +16,13 @@ class Gallery extends Model
     protected array $fileAttributes = ['image_url'];
 
     public const CATEGORIES = [
-        'Cek Kesehatan Gratis (CKG)' => 'Cek Kesehatan Gratis (CKG)',
-        'Praktikum & Klinis' => 'Praktikum & Klinis',
-        'Fasilitas & Lab' => 'Fasilitas & Lab',
-        'Kegiatan Akademik' => 'Kegiatan Akademik',
-        'Rumah Sakit Pendidikan' => 'Rumah Sakit Pendidikan',
-        'Kegiatan Mahasiswa' => 'Kegiatan Mahasiswa',
+        'Akademik' => 'Akademik',
+        'Keterampilan Klinis' => 'Keterampilan Klinis',
+        'Pengabdian Masyarakat' => 'Pengabdian Masyarakat',
+        'Penelitian dan Kegiatan Ilmiah' => 'Penelitian dan Kegiatan Ilmiah',
+        'Penerimaan Mahasiswa Baru' => 'Penerimaan Mahasiswa Baru',
+        'Kemahasiswaan' => 'Kemahasiswaan',
+        'Kerja Sama Institusi' => 'Kerja Sama Institusi',
     ];
 
     protected $fillable = [
@@ -83,7 +84,7 @@ class Gallery extends Model
                     'zh' => '社区服务与免费健康体检（CKG）',
                 ],
                 'image_url' => 'images/facilities/skills-lab.jpg',
-                'category' => 'Cek Kesehatan Gratis (CKG)',
+                'category' => 'Pengabdian Masyarakat',
                 'description' => [
                     'id' => 'Pemeriksaan tekanan darah, gula darah, dan konsultasi kesehatan gratis oleh dokter dan mahasiswa FK UBG.',
                     'en' => 'Free blood pressure, blood sugar checks, and health consultations by FK UBG doctors and students.',
@@ -99,7 +100,7 @@ class Gallery extends Model
                     'zh' => 'OSCE技能实验室临床技能模拟',
                 ],
                 'image_url' => 'images/facilities/skills-lab.jpg',
-                'category' => 'Praktikum & Klinis',
+                'category' => 'Keterampilan Klinis',
                 'description' => [
                     'id' => 'Mahasiswa kedokteran berlatih penanganan pasien menggunakan manikin resusitasi dan simulator medis modern.',
                     'en' => 'Medical students practicing patient management using resuscitation manikins and modern medical simulators.',
@@ -115,7 +116,7 @@ class Gallery extends Model
                     'zh' => '解剖学与显微生物医学实习',
                 ],
                 'image_url' => 'images/facilities/anatomy-lab.jpg',
-                'category' => 'Fasilitas & Lab',
+                'category' => 'Akademik',
                 'description' => [
                     'id' => 'Observasi preparat histologi dan anatomi tubuh manusia dengan mikroskop binokuler beresolusi tinggi.',
                     'en' => 'Observation of histology specimens and human anatomy using high-resolution binocular microscopes.',
@@ -131,7 +132,7 @@ class Gallery extends Model
                     'zh' => '中龙目岛Praya地区医院临床实习',
                 ],
                 'image_url' => 'images/facilities/hospital.jpg',
-                'category' => 'Rumah Sakit Pendidikan',
+                'category' => 'Kerja Sama Institusi',
                 'description' => [
                     'id' => 'Dokter muda menjalani rotasi klinik komprehensif di rumah sakit jejaring pendidikan utama.',
                     'en' => 'Young doctors undergoing comprehensive clinical rotations at the primary teaching network hospital.',
@@ -147,7 +148,7 @@ class Gallery extends Model
                     'zh' => '医学院医学参考中心和数字图书馆',
                 ],
                 'image_url' => 'images/facilities/library.jpg',
-                'category' => 'Fasilitas & Lab',
+                'category' => 'Penelitian dan Kegiatan Ilmiah',
                 'description' => [
                     'id' => 'Ruang belajar mandiri dan diskusi kelompok dilengkapi akses jurnal internasional bereputasi.',
                     'en' => 'Independent study and group discussion spaces equipped with access to reputable international journals.',
@@ -163,7 +164,7 @@ class Gallery extends Model
                     'zh' => '布米戈拉大学综合校区与校长楼',
                 ],
                 'image_url' => 'images/hero/campus-intro.png',
-                'category' => 'Kegiatan Akademik',
+                'category' => 'Penerimaan Mahasiswa Baru',
                 'description' => [
                     'id' => 'Lingkungan kampus asri, modern, dan representatif di pusat Kota Mataram, Nusa Tenggara Barat.',
                     'en' => 'A green, modern, and representative campus environment in central Mataram, West Nusa Tenggara.',
@@ -179,7 +180,7 @@ class Gallery extends Model
                     'zh' => '基于问题的学习（PBL）病例讨论',
                 ],
                 'image_url' => 'images/hero/hero-doctor.png',
-                'category' => 'Kegiatan Akademik',
+                'category' => 'Kemahasiswaan',
                 'description' => [
                     'id' => 'Tutor dan mahasiswa mendiskusikan skenario klinis terintegrasi sistem organ tubuh manusia.',
                     'en' => 'Tutors and students discuss clinical scenarios integrated with human body organ systems.',
