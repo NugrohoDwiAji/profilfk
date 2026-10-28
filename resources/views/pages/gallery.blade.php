@@ -52,7 +52,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Category Filter Pills -->
-        <div class="flex items-center justify-start sm:justify-center gap-2 mb-12 overflow-x-auto pb-3">
+        <div class="flex items-center justify-start sm:justify-center flex-wrap gap-2 mb-12  pb-3">
             <a 
                 href="{{ route('gallery.index') }}" 
                 class="px-4 py-2 rounded-xl text-xs font-semibold uppercase tracking-wider transition-all whitespace-nowrap {{ !request()->filled('category') || request('category') === 'all' ? 'bg-gradient-to-r from-[#08244b] via-[#2466c1] to-[#08244b] text-white shadow-sm' : 'bg-surface text-body hover:bg-steel-50 border border-border-subtle' }}"
